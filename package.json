@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "description": "Image Merger",
   "scripts": {
-    "start": "node index.js --greeting=$greeting --who=$who --width=$width --height=$height --color=$color --size=$size"
+    "build": "npx tsc",
+    "start": "npm run build && node dist/index.js"
   },
   "author": "Kasib Kismath",
   "license": "MIT",
   "dependencies": {
-    "merge-img": "^2.1.3",
-    "minimist": "^1.2.7",
-    "request-promise": "^4.2.6"
+    "axios": "^1.4.0",
+    "lodash": "^4.17.21",
+    "merge-img": "^2.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.1",
+    "typescript": "^5.1.6"
   }
 }
